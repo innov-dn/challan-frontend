@@ -8,7 +8,7 @@ import api           from "./services/api";
 import "./App.css";
 
 // ✅ Set your secret PIN here
-const SECRET_PIN = "challan2024";
+const SECRET_PIN = "devansh2026";
 const MAX_FREE_REQUESTS = 50; // lock after 50 requests
 
 const TABS = [
