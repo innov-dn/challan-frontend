@@ -206,8 +206,18 @@ export default function App() {
                     lastChallan
                         ? <ChallanCard
                             challan={lastChallan}
-                            onUpdate={fetchAll} />
-                        : <div className="empty-state">
+                            onUpdate={() => {
+                                fetchAll();
+                                api.getAll().then(res => {
+                                    const updated = res.data.find(
+                                        c => c.id === lastChallan.id
+                                        );
+                                        if (updated) {
+                                            setLastChallan(updated);
+                                        }
+                                    });
+                                }} />
+                            : <div className="empty-state">
                             <p>No challan generated yet.
                                Use Issue Challan tab.</p>
                           </div>
