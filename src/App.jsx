@@ -81,6 +81,9 @@ export default function App() {
                     <span className="pin-flag">🇮🇳</span>
                     <h2>AI Challan Generator</h2>
                     <p>Enter PIN to access</p>
+                    <p className="pin-hint">
+                        Demo PIN: <strong>devansh2026</strong>
+                    </p>
                     <input
                         type="password"
                         placeholder="Enter PIN"
